@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400;1,400&display=swap');
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+        /* Start small and transparent */
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        /* Full size and visible */
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5e9d7;
+    background-image: url('../../assets/home.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0;
+    transform: scale(1.5);
+    animation: popUp 1s ease-in-out forwards;
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.navbar {
+    position: absolute;
+    top: 35px;
+    right: 20px;
+}
+
+.navbar a {
+    font-family: 'Baskerville', serif;
+    margin-top: 100px;
+    margin-left: 5px;
+    margin-right: 40px;
+    font-size: 20px;
+    color:  #3b4034;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #a4bdf7;
+
+}
+.title {
+    margin-top: -100px;
+    font-family: 'Baskerville';
+    margin-left: -600px;
+    margin-bottom: -80px;
+    font-size: 200px;
+    color: #7a826e;
+}
+
+.italicized {
+    font-family: 'Baskerville';
+    font-style: italic;
+    font-size: 220px;
+}
+
+.start-btn {
+    font-style: bold;
+    margin-left: -600px;
+    margin-top: 70px;
+    padding: 5px 30px;
+    font-size: 1.2rem;
+    font-family: 'Baskerville', serif;
+    border: 1px solid #736d5f;
+    background-color: white;
+    color: #736d5f;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.start-btn:hover {
+    background-color:  #a4bdf7;
+    border-color: #7a826e;
+}
