@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400;1,400&display=swap');
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+        /* Start small and transparent */
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        /* Full size and visible */
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5e9d7;
+    background-image: url('../../assets/home.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    text-align: center;
+}
+
+input {
+    margin: 1rem;
+}
