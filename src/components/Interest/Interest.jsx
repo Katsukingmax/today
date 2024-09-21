@@ -1,5 +1,5 @@
-import React from 'react'
-import './Interest'
+import React { useState } from 'react'
+import './Interest.css'
 
 const Interest = () => {
   const [interest, setInterest]=useState('');
