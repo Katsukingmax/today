@@ -16,7 +16,7 @@ const Interest = () => {
 
     localStorage.setItem('interestData', JSON.stringify(interestData));
 
-    console.log('Interest data stored in local storage: ', intereData);
+    console.log('Interest data stored in local storage: ', interestData);
     alert('Your interest "${feeling}" has been saved locally!');
   };
 
