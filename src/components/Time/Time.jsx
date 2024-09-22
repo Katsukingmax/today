@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Time.css';
 import nextButtonImg from '../../assets/nextbutton.PNG';
-
+import backButtonImg from '../../assets/backbutton.PNG';
+import clockImg from '../../assets/clock.png';
 
 const Time = () => {
   const [time, setTime] = useState('');
@@ -21,14 +22,19 @@ const Time = () => {
     }
 
     localStorage.setItem('time', time);
+    navigate('/interest');
+  };
 
-  
-      navigate('/interest');
-  
+  const handleBack = () => {
+    navigate('/feeling');
   };
 
   return (
     <div className='time-container'>
+      <div className="clock-container">
+        <img src={clockImg} alt="Clock" className="clock-image" />
+      </div>
+      
       <div className='time-message'>How much time do you have?</div>
       <div className='time-form'>
         <form onSubmit={handleSubmit}>
@@ -78,8 +84,12 @@ const Time = () => {
           </button>
         </form>
       </div>
+
+      <button className='back-btn' onClick={handleBack}>
+        <img src={backButtonImg} alt="Go back" className='back-btn-img' />
+      </button>
     </div>
   )
 }
 
-export default Time
+export default Time;
