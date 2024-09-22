@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -6,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="newsletter-section">
         <div className="newsletter-title">
-        Unlock your perfect <span className="newsletter-today">today</span>
+          Unlock your perfect <span className="newsletter-today">today</span>
         </div>
         <div className="newsletter-signup">
           <input
@@ -19,7 +20,7 @@ const Footer = () => {
       </div>
       <nav className="footer-nav">
         <ul className="footer-links">
-          <li><a href="/home">Back to home</a></li>
+          <li><Link to="./components/Home/Home.jsx">Back to home</Link></li>  
         </ul>
       </nav>
     </footer>
