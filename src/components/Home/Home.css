@@ -32,12 +32,12 @@ body {
     height: 100vh;
     opacity: 0;
     transform: scale(1.5);
-    animation: popUp 1s ease-in-out forwards; /* Smooth pop-up animation */
+    animation: popUp 1s ease-in-out forwards;
 }
 
 .logo-container {
     position: absolute;
-    top: 20px; /* Slightly adjusted positioning */
+    top: 20px;
     left: 20px;
 }
 
@@ -67,26 +67,26 @@ body {
 
 .content {
     display: flex;
-    flex-direction: column; /* Stack title and button vertically */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Full height */
+    height: 100%;
     text-align: center;
-    z-index: 2; /* Ensure it's above the background */
+    z-index: 2;
 }
 
 .title {
     font-family: 'Baskerville', serif;
-    font-size: clamp(4rem, 10vw, 12rem); /* Responsive scaling */
-    color: #4a4a4a; /* Darker for better contrast */
-    margin-bottom: 20px; /* Space between title and button */
+    font-size: clamp(4rem, 10vw, 12rem);
+    color: #4a4a4a;
+    margin-bottom: 20px;
 }
 
 .italicized {
     font-family: 'Baskerville', serif;
     font-style: italic;
-    font-size: clamp(5rem, 12vw, 14rem); /* Responsive scaling for different screens */
-    color: #8e8e8e; /* Slightly lighter gray */
+    font-size: clamp(5rem, 12vw, 14rem);
+    color: #8e8e8e;
 }
 
 .start-btn {
@@ -106,6 +106,6 @@ body {
 }
 
 .start-btn:hover {
-    background-color: #a4bdf7; /* Hover effect */
+    background-color: #a4bdf7;
     border-color: #7a826e;
 }

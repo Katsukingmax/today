@@ -13,14 +13,14 @@ const Greeting = () => {
     }
 
     const timer = setTimeout(() => {
-      navigate('/feeling'); // Navigate to Feeling component
-    }, 2000); // 3 seconds delay
+      navigate('/feeling');
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
 
   return (
-    <div className="splash-container"> {/* Apply the CSS class */}
+    <div className="splash-container">
       <div className = "greeting-message">Hi, <span className = "greeting-name">{username || 'guest'}</span>!</div>
       <p>Let's start <span className = "greeting-today">today</span></p>
     </div>

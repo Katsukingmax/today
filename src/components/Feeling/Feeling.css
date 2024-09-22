@@ -4,27 +4,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center content vertically */
+    justify-content: center;
     text-align: center;
     padding: 20px;
     font-family: 'Arial', sans-serif;
     background-color: white;
-    height: 100vh; /* 100% viewport height to center everything */
-    position: relative; /* Allow absolute positioning of the next button */
+    height: 100vh;
+    position: relative;
 }
 
 .feeling-message {
     font-family: 'Baskerville';
-    font-size: 3rem; /* Slightly larger for better emphasis */
-    margin-bottom: 30px; /* Adjust space below the heading */
+    font-size: 3rem;
+    margin-bottom: 30px;
     color: #4a4a4a;
 }
 
 .feeling-form {
     display: flex;
-    justify-content: center; /* Center the mascots horizontally */
-    align-items: center; /* Vertically center the mascots */
-    gap: 60px; /* Add space between the mascots */
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
     width: 100%;
 }
 
@@ -38,28 +38,26 @@
 .feeling-image-container {
     display: flex;
     justify-content: center;
-    width: 150px; /* Ensure the container width matches the image size */
+    width: 150px;
 }
 
 .feeling-image {
-    width: 150px; /* Adjust the size of the mascot images */
+    width: 150px;
     height: auto;
     margin-bottom: 10px;
     border: 2px solid transparent;
-    border-radius: 50%; /* Make the image round */
+    border-radius: 50%;
     transition: border-color 0.3s ease;
 }
 
-/* Link the radio input to the image */
 .feeling-option input[type="radio"] {
-    display: none; /* Hide the default radio button */
+    display: none;
 }
 
 .feeling-option input[type="radio"]:checked + .feeling-image-container .feeling-image {
-    border-color: #a4bdf7; /* Highlight the selected image */
+    border-color: #a4bdf7;
 }
 
-/* Ensure the image is clickable */
 .feeling-option label {
     display: flex;
     flex-direction: column;
@@ -69,16 +67,15 @@
 
 .feeling-label {
     font-family: 'Baskeville';
-    font-size: 1.4rem; /* Slightly larger font */
+    font-size: 1.4rem;
     color: #333;
-    margin-top: 10px; /* Add space between the image and the label */
-    text-align: center; /* Ensure the label is centered */
+    margin-top: 10px;
+    text-align: center;
 }
 
 .submit-btn {
-    position: absolute; /* Position the button absolutely */
-    right: 40px; /* 20px from the right edge */
-    bottom: 80px; /* Adjust this value to move the button higher */
+    position: absolute;
+    right: 40px;
     padding: 10px 30px;
     font-size: 1.2rem;
     font-family: monospace;

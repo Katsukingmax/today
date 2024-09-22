@@ -1,4 +1,3 @@
-// NameInput.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './NameInput.css';
@@ -9,8 +8,8 @@ const NameInput = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem('username', name); // Store the name in localStorage
-    navigate('/greeting'); // Navigate to Greeting component
+    localStorage.setItem('username', name);
+    navigate('/greeting');
   };
 
   return (

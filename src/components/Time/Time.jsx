@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Keeping your existing setup
+import { useNavigate } from 'react-router-dom';
 import './Time.css';
-import nextButtonImg from '../../assets/nextbutton.PNG'; // Existing image import
-// import clockImage from '../../assets/clock.png'; // New image import
+import nextButtonImg from '../../assets/nextbutton.PNG';
+
 
 const Time = () => {
   const [time, setTime] = useState('');
@@ -20,7 +20,6 @@ const Time = () => {
       return;
     }
 
-    // Store the user's time selection in local storage
     localStorage.setItem('time', time);
 
   

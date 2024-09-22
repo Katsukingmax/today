@@ -4,19 +4,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center content vertically */
+    justify-content: center;
     text-align: center;
     padding: 20px;
     font-family: 'Arial', sans-serif;
     background-color: white;
-    height: 100vh; /* Full viewport height */
-    position: relative; /* Allows for absolute positioning of the button */
+    height: 100vh;
+    position: relative;
 }
 
 .interest-message {
     font-family: 'Baskerville';
-    font-size: 3rem; /* Emphasize the heading */
-    margin-bottom: 30px; /* Space below the heading */
+    font-size: 3rem;
+    margin-bottom: 30px;
     color: #4a4a4a;
 }
 
@@ -24,7 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px; /* Add space between the interest options */
+    gap: 60px;
     width: 100%;
 }
 
@@ -37,16 +37,16 @@
 
 .interest-label {
     font-family: 'Baskerville';
-    font-size: 1.4rem; /* Slightly larger font */
+    font-size: 1.4rem;
     color: #333;
-    margin-top: 10px; /* Add space between the input and label */
-    text-align: center; /* Ensure the label is centered */
+    margin-top: 10px;
+    text-align: center;
 }
 
 .submit-btn {
-    position: absolute; /* Position the button absolutely */
-    right: 40px; /* Adjust as needed to match the time and feeling pages */
-    bottom: 80px; /* Adjust this value to move the button higher */
+    position: absolute;
+    right: 40px;
+    bottom: 80px;
     padding: 10px 30px;
     font-size: 1.2rem;
     font-family: monospace;

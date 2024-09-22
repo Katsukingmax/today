@@ -1,10 +1,10 @@
 import React from 'react';
 
 const PlanToday = () => {
-  // Retrieve the stored answers from localStorage (strings directly, not JSON)
   const feeling = localStorage.getItem('feeling') || 'Unknown';
   const time = localStorage.getItem('time') || 'Unknown';
   const interest = localStorage.getItem('interest') || 'Unknown';
+  const username = localStorage.getItem('username') || 'Guest';;
 
   console.log('Feeling:', feeling);
   console.log('Time:', time);
@@ -223,17 +223,18 @@ const PlanToday = () => {
       }
     }
 
-    // Default message for cases that don't match
     return 'No plan available for this combination.';
   };
 
   return (
     <div>
-      <h1>Your Plan for Today</h1>
+      <h1><span className = "greeting-name">{username || 'guest'}</span>'s Plan for Today</h1>
       <p>Feeling: {feeling}</p>
       <p>Available Time: {time}</p>
       <p>Interest: {interest}</p>
       <h2>{getResult()}</h2>
+
+      <button type="reset" id="restart-btn"  className="restart">Restart</button>
     </div>
   );
 };

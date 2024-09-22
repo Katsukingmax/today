@@ -9,7 +9,7 @@
     padding: 20px;
     font-family: 'Arial', sans-serif;
     background-color: white;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     position: relative;
 }
 
@@ -31,7 +31,7 @@
     font-family: 'Baskerville';
     font-size: 1.4rem;
     color: #333;
-    margin-bottom: 10px; /* Space between label and input */
+    margin-bottom: 10px;
 }
 
 .nameinput-input {
@@ -39,7 +39,7 @@
     font-size: 1.2rem;
     border: 1px solid #736d5f;
     border-radius: 10px;
-    width: 60%; /* Adjust width as needed */
+    width: 60%; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: border-color 0.5s ease, box-shadow 0.5s ease;
 }
@@ -54,29 +54,29 @@
     padding: 15px;
     font-size: 1.2rem;
     border: 2px solid #736d5f;
-    border-radius: 20px; /* More rounded corners for a modern look */
+    border-radius: 20px;
     outline: none;
     width: 320px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
-    background-color: #f9f9f9; /* Soft background color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
 }
 
 .nameinput-field::placeholder {
-    color: #b0b0b0; /* Softer placeholder color */
-    font-style: italic; /* Make placeholder text italic for style */
+    color: #b0b0b0;
+    font-style: italic;
 }
 
 .nameinput-field:focus {
-    border-color: #6a82fb; /* Change border color on focus */
-    background-color: #fff; /* Brighten the background when focused */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on focus */
-    transform: scale(1.05); /* Slightly enlarge the input field on focus */
+    border-color: #6a82fb;
+    background-color: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
 .submit-btn {
-    margin-top: 20px; /* Space above the button */
+    margin-top: 20px;
     padding: 10px 30px;
     font-size: 1.2rem;
     font-family: monospace;

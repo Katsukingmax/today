@@ -1,58 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400;1,400&display=swap');
 
-/* Container Styling */
 .time-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center content vertically */
+    justify-content: center;
     text-align: center;
     padding: 20px;
     font-family: 'Arial', sans-serif;
     background-color: white;
-    height: 100vh; /* Full viewport height */
-    position: relative; /* Allows for absolute positioning of the button */
-    /* Removed animation */
+    height: 100vh;
+    position: relative;
 }
 
-/* Heading */
 .time-message {
     font-family: 'Baskerville';
-    font-size: 3rem; /* Emphasize the heading */
-    margin-bottom: 30px; /* Space below the heading */
+    font-size: 3rem;
+    margin-bottom: 30px;
     color: #4a4a4a;
 }
 
-/* Radio Inputs Container */
 .time-form {
     display: flex;
-    justify-content: center; /* Center the options horizontally */
+    justify-content: center;
     align-items: center;
-    gap: 60px; /* Space between radio options */
+    gap: 60px;
     width: 100%;
-    max-width: 500px; /* Optional: Limit the width for better readability */
+    max-width: 500px;
 }
 
-/* Individual Radio Option */
+
 .time-option {
     display: flex;
-    flex-direction: column; /* Stack the label below the input */
+    flex-direction: column;
     align-items: center;
     text-align: center;
     cursor: pointer;
 }
 
 .time-option input {
-    margin: 1rem 0; /* Adjusted margin for vertical spacing */
+    margin: 1rem 0;
     cursor: pointer;
-    /* Removed transform: scale(1.2); if not needed */
 }
 
-/* Submit Button */
 .submit-btn {
-    position: absolute; /* Position the button absolutely */
-    right: 40px; /* 40px from the right edge */
-    bottom: 80px; /* Adjust this value to move the button higher */
+    position: absolute;
+    right: 40px;
+    bottom: 80px;
     padding: 10px 30px;
     font-size: 1.2rem;
     font-family: monospace;
@@ -74,8 +68,6 @@
     border-color: #7a826e;
 }
 
-/* Next Button Image Styling */
 .next-btn {
-    width: 50px; /* Adjust the width as needed */
     height: auto;
 }

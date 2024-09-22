@@ -14,35 +14,30 @@ const HomePage = () => {
   }, []);
 
   const handleStartNow = () => {
-    navigate('/name-input'); // Navigate to Greeting component
+    navigate('/name-input');
   };
 
   return (
     <div className={`home-page ${animatePage ? 'pop-up' : ''}`}>
-      {/* Home Section */}
       <section className="home" id="home">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
         </div>
 
-        {/* Title Section */}
         <div className="content">
           <div className="title">
             <span className="italicized">to</span>
             <span>day.</span>
           </div>
         
-          {/* Start Now Button */}
           <button onClick={handleStartNow} className="start-btn">start now</button>
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about">
         <About />
       </section>
 
-      {/* Footer Section */}
       <Footer />
     </div>
   );
