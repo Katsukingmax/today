@@ -12,15 +12,12 @@ const Feeling = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Store the feeling data in JSON format in localStorage
     const feelingData = {
       feeling: feeling
     };
 
-    // Save to local storage as a JSON string
     localStorage.setItem('feelingData', JSON.stringify(feelingData));
 
-    // Log to console to simulate saving the data
     console.log('Feeling data stored in local storage:', feelingData);
     alert(`Your feeling "${feeling}" has been saved locally!`);
   };
