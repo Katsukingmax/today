@@ -21,8 +21,8 @@ const Greeting = () => {
 
   return (
     <div className="splash-container"> {/* Apply the CSS class */}
-      <div className = "greeting-message">hi, <span className = "greeting-name">{username || 'guest'}</span>!</div>
-      <p>let's start <span className = "greeting-today">today</span></p>
+      <div className = "greeting-message">Hi, <span className = "greeting-name">{username || 'guest'}</span>!</div>
+      <p>Let's start <span className = "greeting-today">today</span></p>
     </div>
   );
 };

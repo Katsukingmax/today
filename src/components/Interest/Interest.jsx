@@ -32,71 +32,34 @@ const Interest = () => {
       <form onSubmit={handleSubmit} className="interest-form">
         <div className="interest-option">
           <label>
-          <input
-            type="radio"
-            name="interest"
-            value="Art"
-            checked={interest === 'Art'}
-            onChange={handleChange}
-          />
-          Art
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="interest"
-            value="Sports"
-            checked={interest === 'Sports'}
-            onChange={handleChange}
-          />
-          Sports
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="interest"
-            value="Nature"
-            checked={interest === 'Nature'}
-            onChange={handleChange}
-          />
-          Nature
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="interest"
-            value="Food"
-            checked={interest === 'Food'}
-            onChange={handleChange}
-          />
-          Food
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="interest"
-            value="Relax"
-            checked={interest === 'Relax'}
-            onChange={handleChange}
-          />
-          Relax
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="interest"
-            value="Try New Thing"
-            checked={interest === 'Try New Thing'}
-            onChange={handleChange}
-          />
-          Try New Thing
-        </label>
+            <input
+              type="radio"
+              name="interest"
+              value="Art"
+              checked={interest === 'Art'}
+              onChange={handleChange}
+            />
+            <span className="interest-label">Art</span>
+          </label>
         </div>
 
         <div className="interest-option">
           <label>
             <input
               type="radio"
+              name="interest"
+              value="Sports"
+              checked={interest === 'Sports'}
+              onChange={handleChange}
+            />
+            <span className="interest-label">Sports</span>
+          </label>
+        </div>
+        <div className="interest-option">
+          <label>
+            <input
+              type="radio"
+              name="interest"
               value="Nature"
               checked={interest === 'Nature'}
               onChange={handleChange}
@@ -104,23 +67,43 @@ const Interest = () => {
             <span className="interest-label">Nature</span>
           </label>
         </div>
-
-
-        <div className="interest-option">
-          <label>
-            <input
-              type="radio"
-              value="Try New Things"
-              checked={interest === 'Try New Things'}
-              onChange={handleChange}
-            />
-            <span className="interest-label">Try New Things</span>
-          </label>
+          <div className="interest-option">
+            <label>
+              <input
+                type="radio"
+                name="interest"
+                value="Food"
+                checked={interest === 'Food'}
+                onChange={handleChange}
+              />
+              <span className="interest-label">Food</span>
+            </label>
+          </div>
+          <div className="interest-option">
+            <label>
+              <input
+                type="radio"
+                name="interest"
+                value="Relax"
+                checked={interest === 'Relax'}
+                onChange={handleChange}
+              />
+              <span className="interest-label">Relax/Chill</span>
+            </label>
+          </div>
+          <div className="interest-option">
+            <label>
+              <input
+                type="radio"
+                name="interest"
+                value="Try New Thing"
+                checked={interest === 'Try New Thing'}
+                onChange={handleChange}
+              />
+              <span className="interest-label">Try New Things</span>
+            </label>
         </div>
-
-        <button type="submit" id="btn"  className="submit-btn">
-          <img src={nextButtonImg} alt="Go to the next page" id="next-btn" />
-        </button>
+        <button type="submit" id="btn"  className="submit-btn">See Result</button>
       </form>
     </div>
   );

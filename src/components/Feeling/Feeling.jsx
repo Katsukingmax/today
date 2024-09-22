@@ -46,7 +46,7 @@ const Feeling = () => {
             <div className="feeling-image-container">
               <img src={happyImage} alt="Happy" className="feeling-image" />
             </div>
-            <span className="feeling-label">happy</span>
+            <span className="feeling-label">Happy</span>
           </label>
         </div>
 
@@ -62,7 +62,7 @@ const Feeling = () => {
             <div className="feeling-image-container">
               <img src={sadImage} alt="Sad" className="feeling-image" />
             </div>
-            <span className="feeling-label">sad</span>
+            <span className="feeling-label">Sad</span>
           </label>
         </div>
 
@@ -78,7 +78,7 @@ const Feeling = () => {
             <div className="feeling-image-container">
               <img src={huhImage} alt="IDK" className="feeling-image" />
             </div>
-            <span className="feeling-label">not sure</span>
+            <span className="feeling-label">Not sure</span>
           </label>
         </div>
 

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400;1,400&display=swap');
+
+.nameinput-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+}
+
+.nameinput-message {
+    font-family: 'Baskerville';
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #4a4a4a;
+}
+
+.nameinput-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.nameinput-label {
+    font-family: 'Baskerville';
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px; /* Space between label and input */
+}
+
+.nameinput-input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #736d5f;
+    border-radius: 10px;
+    width: 60%; /* Adjust width as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.nameinput-input:focus {
+    border-color: #7a826e;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nameinput-field {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 2px solid #736d5f;
+    border-radius: 20px; /* More rounded corners for a modern look */
+    outline: none;
+    width: 320px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+    background-color: #f9f9f9; /* Soft background color */
+}
+
+.nameinput-field::placeholder {
+    color: #b0b0b0; /* Softer placeholder color */
+    font-style: italic; /* Make placeholder text italic for style */
+}
+
+.nameinput-field:focus {
+    border-color: #6a82fb; /* Change border color on focus */
+    background-color: #fff; /* Brighten the background when focused */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on focus */
+    transform: scale(1.05); /* Slightly enlarge the input field on focus */
+}
+
+.submit-btn {
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    font-family: monospace;
+    border: 1px solid #736d5f;
+    background-color: white;
+    color: #736d5f;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+    background-color: #a4bdf7;
+    border-color: #7a826e;
+}

@@ -14,7 +14,7 @@ const HomePage = () => {
   }, []);
 
   const handleStartNow = () => {
-    navigate('/greeting'); // Navigate to Greeting component
+    navigate('/name-input'); // Navigate to Greeting component
   };
 
   return (
