@@ -29,12 +29,12 @@ const About = () => {
        </div>
        <div className="para">
         <p>
-          your personalized guide that helps you make the most of your time by offering personalized activity 
-          recommendations based on your mood, interests, and availability. whether it’s a few minutes or a whole day, 
+          Your personalized guide that helps you make the most of your time by offering personalized activity 
+          recommendations based on your mood, interests, and availability. Whether it’s a few minutes or a whole day, 
           <span className='today'>today</span> suggests the perfect way to spend your time, ensuring every moment counts.
         </p>
         </div>
-        <p className="personal-info">start your day with <span className='secondToday'>today.</span> </p>
+        <p className="personal-info">Start your day,<span className='secondToday'>today.</span> </p>
       </div>
     </section>
   );
