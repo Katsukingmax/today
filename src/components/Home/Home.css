@@ -54,17 +54,28 @@ body {
 }
 
 .navbar a {
-    font-family: 'Baskerville', serif;
+    font-family: monospace;
     margin-top: 100px;
     margin-left: 5px;
     margin-right: 40px;
-    font-size: 20px;
+    font-size: 17px;
     color:  #3b4034;
     text-decoration: none;
 }
 
 .navbar a:hover {
     color: #a4bdf7;
+
+}
+
+.about 
+{
+    font-family: monospace;
+    margin-left: 5px;
+    margin-right: 40px;
+    font-size: 17px;
+    color:  #3b4034;
+    text-decoration: none;
 
 }
 .title {
@@ -88,7 +99,7 @@ body {
     margin-top: 70px;
     padding: 5px 30px;
     font-size: 1.2rem;
-    font-family: 'Baskerville', serif;
+    font-family: monospace;
     border: 1px solid #736d5f;
     background-color: white;
     color: #736d5f;

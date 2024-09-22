@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import logo from '../../assets/mainlogo.PNG';  
 import About from '../About/About.jsx';  
-
+import Footer from '../Footer/Footer.jsx';  // Import the Footer component
 
 const HomePage = () => {
   const [animatePage, setAnimatePage] = useState(false);
@@ -11,6 +11,14 @@ const HomePage = () => {
   useEffect(() => {
     setAnimatePage(true);
   }, []);
+
+  // Smooth scroll to About section
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className={`home-page ${animatePage ? 'pop-up' : ''}`}>
@@ -22,7 +30,7 @@ const HomePage = () => {
         <nav className="navbar">
           <Link to="/register" className="register">register</Link>
           <Link to="/login" className="login">login</Link>
-          <a href="#about" className="about">about</a> {/* Link to About section */}
+          <button onClick={scrollToAbout} className="about">about</button> {}
         </nav>
         <div className="content">
           <div className="title">
@@ -36,7 +44,12 @@ const HomePage = () => {
       </section>
 
       {/* About Section */}
-      <About />
+      <section id="about">
+        <About />
+      </section>
+
+      {/* Footer Section */}
+      <Footer />  {/* Render Footer component at the bottom */}
     </div>
   );
 };
