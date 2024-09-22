@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Feeling.css';
+import './Feeling.css';  // Make sure you create Feeling.css
 import happyImage from '../../assets/happy.PNG';
 import sadImage from '../../assets/sad.PNG';
 import huhImage from '../../assets/huh.PNG';
-import nextButtonImg from '../../assets/nextbutton.PNG'; // Import the next button image
+import nextButtonImg from '../../assets/nextbutton.PNG';
 
 const Feeling = () => {
   const [feeling, setFeeling] = useState('');
@@ -16,30 +16,30 @@ const Feeling = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const feelingData = { feeling };
     localStorage.setItem('feelingData', JSON.stringify(feelingData));
-
     alert(`Your feeling "${feeling}" has been saved locally!`);
-    
-    // Navigate to the Time page after submission
-    navigate('/time');
+    navigate('/time'); // Navigate to Time component
   };
 
   return (
     <div className="feeling-container">
-      <h1>How are you feeling?</h1>
+      <div className="feeling-message">How are you feeling?</div>
       <form onSubmit={handleSubmit} className="feeling-form">
+        
         <div className="feeling-option">
           <label>
             <input
               type="radio"
+              name="feeling"
               value="Happy"
               checked={feeling === 'Happy'}
               onChange={handleChange}
             />
-            <img src={happyImage} alt="Happy" className="feeling-image" />
-            Happy
+            <div className="feeling-image-container">
+              <img src={happyImage} alt="Happy" className="feeling-image" />
+            </div>
+            <span className="feeling-label">happy</span>
           </label>
         </div>
 
@@ -47,12 +47,15 @@ const Feeling = () => {
           <label>
             <input
               type="radio"
+              name="feeling"
               value="Sad"
               checked={feeling === 'Sad'}
               onChange={handleChange}
             />
-            <img src={sadImage} alt="Sad" className="feeling-image" />
-            Sad
+            <div className="feeling-image-container">
+              <img src={sadImage} alt="Sad" className="feeling-image" />
+            </div>
+            <span className="feeling-label">sad</span>
           </label>
         </div>
 
@@ -60,17 +63,20 @@ const Feeling = () => {
           <label>
             <input
               type="radio"
+              name="feeling"
               value="Idk"
               checked={feeling === 'Idk'}
               onChange={handleChange}
             />
-            <img src={huhImage} alt="IDK" className="feeling-image" />
-            IDK
+            <div className="feeling-image-container">
+              <img src={huhImage} alt="IDK" className="feeling-image" />
+            </div>
+            <span className="feeling-label">not sure</span>
           </label>
         </div>
 
-        <button type="submit" id="btn">
-          <img src={nextButtonImg} alt="Go to the next page" id="next-btn" />
+        <button type="submit" className="submit-btn">
+          <img src={nextButtonImg} alt="Go to the next page" className="next-btn" />
         </button>
       </form>
     </div>
