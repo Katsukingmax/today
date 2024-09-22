@@ -16,10 +16,17 @@ const Feeling = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const feelingData = { feeling };
-    localStorage.setItem('feelingData', JSON.stringify(feelingData));
-    alert(`Your feeling "${feeling}" has been saved locally!`);
-    navigate('/time'); // Navigate to Time component
+
+    if (!feeling) {
+      alert('Please select how you feel!');
+      return;
+    }
+
+    // Store the feeling in localStorage
+    localStorage.setItem('feeling', feeling);
+
+    // Navigate to the Time page
+    navigate('/time');
   };
 
   return (
