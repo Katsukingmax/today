@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Time.css';
 import nextButtonImg from '../../assets/nextbutton.PNG';
 import backButtonImg from '../../assets/backbutton.PNG';
-import clockImg from '../../assets/clock.png';
+import clockImg from '../../assets/clock.PNG';
 
 const Time = () => {
   const [time, setTime] = useState('');
