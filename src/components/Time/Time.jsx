@@ -40,8 +40,8 @@ const Time = () => {
         />
         More than 8 hours
       </div>
-      <button>
-        <img src={nextButtonImg} alt="Go to next page" />
+      <button onClick={goToInterestPage} id='btn'>
+        <img src={nextButtonImg} alt="Go to next page" id='btn' />
       </button>
     </div>
   )

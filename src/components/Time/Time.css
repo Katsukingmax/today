@@ -29,3 +29,8 @@ body {
 input {
     margin: 1rem;
 }
+
+#btn {
+    width: auto;
+    height: 80px;
+}
