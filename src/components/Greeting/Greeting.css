@@ -18,6 +18,7 @@
   .greeting-name 
   {
     font-size: 25px;
+    padding-left: 5px;
     color: #7a826e ;
     font-family: monospace;
   }
