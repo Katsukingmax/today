@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400;1,400&display=swap');
 
+/* Main CSS */
 .interest-container {
     display: flex;
     flex-direction: column;
@@ -17,7 +18,7 @@
     font-family: 'Baskerville';
     font-size: 3rem;
     margin-bottom: 30px;
-    color: #4a4a4a;
+    color:  #7a826e;
 }
 
 .interest-form {
@@ -38,7 +39,7 @@
 .interest-label {
     font-family: 'Baskerville';
     font-size: 1.4rem;
-    color: #333;
+    color:  #7a826e;
     margin-top: 10px;
     text-align: center;
 }
@@ -68,4 +69,82 @@
 input {
     margin: 1rem;
     cursor: pointer;
+}
+
+.back-btn {
+    position: absolute;
+    left: 40px;
+    bottom: 80px;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    font-family: monospace;
+    border: 1px solid #736d5f;
+    background-color: white;
+    color: #736d5f;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover {
+    background-color: #a4bdf7;
+    border-color: #7a826e;
+}
+
+.back-btn-img {
+    height: 50px;
+}
+
+@media (max-width: 600px) {
+    .interest-form {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .interest-message {
+        font-size: 2rem;
+    }
+
+    .interest-label {
+        font-size: 1.2rem;
+    }
+
+    .submit-btn {
+        font-size: 1.5rem;
+        right: 40px;
+        bottom: 80px;
+        padding: 20px 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .interest-message {
+        font-size: 4rem;
+        margin-bottom: 40px;
+    }
+
+    .interest-form {
+        gap: 80px;
+    }
+
+    .interest-label {
+        font-size: 1.6rem;
+    }
+
+    .submit-btn {
+        font-size: 1.5rem;
+        padding: 15px 40px;
+        right: 60px;
+        bottom: 100px;
+        padding: 10px 30px;
+    }
+
+    .back-btn {
+        font-size: 1.5rem;
+        padding: 15px 40px;
+        left: 60px;
+        bottom: 100px;
+    }
 }
