@@ -18,7 +18,7 @@ const NameInput = () => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Enter your name"
+          placeholder="What's your name?"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
