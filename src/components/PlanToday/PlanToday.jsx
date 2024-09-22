@@ -1,19 +1,28 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './PlanToday.css';
+import plannerIcon from '../../assets/planner.png';
 
 const PlanToday = () => {
+  const [animationTriggered, setAnimationTriggered] = useState(false);
+
   const feeling = localStorage.getItem('feeling') || 'Unknown';
   const time = localStorage.getItem('time') || 'Unknown';
   const interest = localStorage.getItem('interest') || 'Unknown';
   const username = localStorage.getItem('username') || 'Guest';
 
   const capitalizeFirstLetter = (name) => {
-    if(!name) return 'xf';
+    if (!name) return 'Guest';
     return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
   };
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimationTriggered(true);
+    }, 400);
+  }, []);
 
   const getResult = () => {
     if (feeling === 'Happy') {
@@ -238,11 +247,23 @@ const PlanToday = () => {
 
   return (
     <div className="plan-container">
-      <h1><span className="greeting-name">{capitalizeFirstLetter(username)}</span>'s Plan for Today</h1>
+      <h1>
+        <span className="greeting-name">{capitalizeFirstLetter(username)}</span>'s Plan for Today
+      </h1>
       <p>Feeling: {feeling}</p>
       <p>Available Time: {time}</p>
       <p>Interest: {interest}</p>
+
+
+      <img
+        src={plannerIcon}
+        alt="Planner Icon"
+        className={`planner-icon ${animationTriggered ? 'animate-planner' : ''}`}
+      />
+
       <h2>{getResult()}</h2>
+
+
       <button type="button" id="restart-btn" onClick={handleRestart}>Restart</button>
     </div>
   );
