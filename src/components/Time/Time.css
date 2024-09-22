@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400;1,400&display=swap');
 
+@keyframes rotateClock {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .time-container {
     display: flex;
     flex-direction: column;
@@ -13,33 +22,44 @@
     position: relative;
 }
 
+.clock-container {
+    margin-bottom: 20px;
+}
+
+.clock-image {
+    width: 150px;
+    animation: rotateClock 10s linear infinite;
+}
+
 .time-message {
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', serif;
     font-size: 3rem;
     margin-bottom: 30px;
-    color: #4a4a4a;
+    color: #7a826e;
 }
 
 .time-form {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 60px;
+    gap: 30px; 
     width: 100%;
-    max-width: 500px;
+    max-width: 1000px;
 }
 
-
 .time-option {
-    display: flex;
-    flex-direction: column;
+    color: #7a826e;
+    font-family: 'Baskerville';
+    display: inline-flex; 
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    flex-direction: row; 
     cursor: pointer;
+    font-size: 1.2rem;
 }
 
 .time-option input {
-    margin: 1rem 0;
+    margin-right: 10px; 
     cursor: pointer;
 }
 
@@ -70,4 +90,53 @@
 
 .next-btn {
     height: auto;
+}
+
+.back-btn {
+    position: absolute;
+    left: 40px;
+    bottom: 80px;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    font-family: monospace;
+    border: 1px solid #736d5f;
+    background-color: white;
+    color: #736d5f;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-btn:hover {
+    background-color: #a4bdf7;
+    border-color: #7a826e;
+}
+
+.back-btn-img {
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .time-option {
+        color: #7a826e;
+        font-family: 'Baskerville';
+        display: block; 
+        align-items: center;
+        justify-content: center;
+        flex-direction: row; 
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 2000px)
+{
+    .time-option {
+        font-size: 2rem;
+    }
 }
