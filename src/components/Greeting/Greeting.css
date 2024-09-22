@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400;1,400&display=swap');
+
+.splash-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#ffffff;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .greeting-message {
+    font-family: 'Baskerville';
+    font-size: 30px;
+    color: #7a826e;
+  }
+
+  .greeting-name 
+  {
+    font-size: 25px;
+    color: #363a31;
+    font-family: monospace;
+  }
+  
+  .splash-container p
+  {
+    padding-left: 7px;
+    font-family: 'Baskerville';
+    font-size: 30px;
+    color: #7a826e;
+
+  }
+
+  .greeting-today 
+  {
+    font-style: italic;
+    font-family: 'Baskerville';
+    font-size: 30px;
+    color: #7a826e;
+  }
