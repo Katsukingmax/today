@@ -9,7 +9,7 @@
     padding: 20px;
     font-family: 'Arial', sans-serif;
     background-color: white;
-    height: 100vh;
+    min-height: 100vh; 
     position: relative;
 }
 
@@ -17,7 +17,7 @@
     font-family: 'Baskerville';
     font-size: 3rem;
     margin-bottom: 30px;
-    color: #4a4a4a;
+    color: #7a826e;
 }
 
 .feeling-form {
@@ -26,6 +26,7 @@
     align-items: center;
     gap: 60px;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .feeling-option {
@@ -66,9 +67,9 @@
 }
 
 .feeling-label {
-    font-family: 'Baskeville';
+    font-family: 'Baskerville';
     font-size: 1.4rem;
-    color: #333;
+    color:  #7a826e;
     margin-top: 10px;
     text-align: center;
 }
@@ -97,4 +98,30 @@
 .next-btn {
     width: 50px;
     height: auto;
+}
+
+@media (max-width: 600px) {
+    .feeling-container {
+        padding: 10px;
+        height: auto;
+    }
+
+    .feeling-message {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .feeling-form {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feeling-image {
+        width: 100px;
+        height: auto;
+    }
+
+    .feeling-label {
+        font-size: 1rem;
+    }
 }
