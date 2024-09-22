@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Greeting.css'; // Import the CSS file
+import './Greeting.css';
 
 const Greeting = () => {
   const [username, setUsername] = useState('');
