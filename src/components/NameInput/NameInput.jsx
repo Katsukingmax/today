@@ -6,26 +6,29 @@ const NameInput = () => {
   const [name, setName] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     localStorage.setItem('username', name);
-    navigate('/greeting');
+    navigate('/greeting'); 
+
+    if(!name) {
+      alert('Type your name!')
+      return;
+    }
   };
+
+  
 
   return (
     <div className="nameinput-container">
       <div className="nameinput-message">Enter Your Name</div>
-      <form className="nameinput-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          className='nameinput-field'
-          placeholder="What's your name?"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <button type="submit" className="submit-btn">Next</button>
-      </form>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Type your name"
+        className="nameinput-field"
+      />
+      <button className="submit-btn" onClick={handleSubmit}>Submit</button>
     </div>
   );
 };
