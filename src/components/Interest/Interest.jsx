@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Interest.css'; 
+import backButtonImg from '../../assets/backbutton.PNG';
 
 const Interest = () => {
   const [interest, setInterest] = useState('');
@@ -10,7 +11,7 @@ const Interest = () => {
     setInterest(e.target.value);
   };
 
- const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!interest) {
@@ -21,6 +22,10 @@ const Interest = () => {
     localStorage.setItem('interest', interest);
 
     navigate('/plan');
+  };
+
+  const handleBack = () => {
+    navigate('/time');
   };
 
   return (
@@ -108,6 +113,10 @@ const Interest = () => {
         <button type="submit" id="btn"  className="submit-btn">See Result</button>
         
       </form>
+
+      <button className='back-btn' onClick={handleBack}>
+        <img src={backButtonImg} alt="Go back" className='back-btn-img' />
+      </button>
     </div>
   );
 };
