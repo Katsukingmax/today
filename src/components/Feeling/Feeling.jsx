@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Feeling.css';
 import happyImage from '../../assets/happy.PNG';
 import sadImage from '../../assets/sad.PNG';
 import huhImage from '../../assets/huh.PNG';
+import nextButtonImg from '../../assets/nextbutton.PNG'; // Import the next button image
 
 const Feeling = () => {
   const [feeling, setFeeling] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFeeling(e.target.value);
@@ -14,19 +17,13 @@ const Feeling = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-<<<<<<< HEAD
-    const feelingData = {
-      feeling: feeling
-    };
-
-    localStorage.setItem('feelingData', JSON.stringify(feelingData));
-
-=======
     const feelingData = { feeling };
     localStorage.setItem('feelingData', JSON.stringify(feelingData));
->>>>>>> abe05c5bc33f130ee74312e51496ea2dd39ae2c6
-    console.log('Feeling data stored in local storage:', feelingData);
+
     alert(`Your feeling "${feeling}" has been saved locally!`);
+    
+    // Navigate to the Time page after submission
+    navigate('/time');
   };
 
   return (
@@ -72,7 +69,9 @@ const Feeling = () => {
           </label>
         </div>
 
-        <button type="submit">Next</button>
+        <button type="submit" id="btn">
+          <img src={nextButtonImg} alt="Go to the next page" id="next-btn" />
+        </button>
       </form>
     </div>
   );
