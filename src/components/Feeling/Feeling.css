@@ -1,67 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400;1,400&display=swap');
 
-@keyframes popUp {
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
-        /* Start small and transparent */
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-        /* Full size and visible */
-    }
-}
-
-body {
-    font-family: 'Baskervville', serif; /* Apply the imported font to the entire page */
-}
-
 .feeling-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
     text-align: center;
-    margin-top: 30px;
-    animation: popUp 0.6s ease-in-out; /* Add the popUp animation to the container */
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    height: 100vh; /* 100% viewport height to center everything */
+    position: relative; /* Allow absolute positioning of the next button */
+}
+
+.feeling-message {
+    font-family: 'Baskerville';
+    font-size: 3rem; /* Slightly larger for better emphasis */
+    margin-bottom: 30px; /* Adjust space below the heading */
+    color: #4a4a4a;
 }
 
 .feeling-form {
     display: flex;
-    justify-content: center; /* Center the options horizontally */
-    align-items: center; /* Align the options vertically */
-    gap: 20px; /* Add some space between the options */
-    margin-top: 20px;
+    justify-content: center; /* Center the mascots horizontally */
+    align-items: center; /* Vertically center the mascots */
+    gap: 60px; /* Add space between the mascots */
+    width: 100%;
 }
 
 .feeling-option {
     display: flex;
-    flex-direction: column; /* Stack the image and text vertically */
+    flex-direction: column;
     align-items: center;
-    animation: popUp 0.6s ease-in-out; /* Add animation to each option */
+    text-align: center;
+}
+
+.feeling-image-container {
+    display: flex;
+    justify-content: center;
+    width: 150px; /* Ensure the container width matches the image size */
 }
 
 .feeling-image {
-    width: 60px; /* Slightly increase the image size */
+    width: 150px; /* Adjust the size of the mascot images */
     height: auto;
-    margin-bottom: 10px; /* Add space between the image and the label text */
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    border-radius: 50%; /* Make the image round */
+    transition: border-color 0.3s ease;
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+/* Link the radio input to the image */
+.feeling-option input[type="radio"] {
+    display: none; /* Hide the default radio button */
+}
+
+.feeling-option input[type="radio"]:checked + .feeling-image-container .feeling-image {
+    border-color: #a4bdf7; /* Highlight the selected image */
+}
+
+/* Ensure the image is clickable */
+.feeling-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     cursor: pointer;
-    background-color: transparent; /* Transparent background for cleaner button look */
-    border: none; /* Remove default button styling */
 }
 
-#btn {
-    width: auto;
-    height: 80px;
+.feeling-label {
+    font-family: 'Baskeville';
+    font-size: 1.4rem; /* Slightly larger font */
+    color: #333;
+    margin-top: 10px; /* Add space between the image and the label */
+    text-align: center; /* Ensure the label is centered */
+}
+
+.submit-btn {
+    position: absolute; /* Position the button absolutely */
+    right: 40px; /* 20px from the right edge */
+    bottom: 80px; /* Adjust this value to move the button higher */
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    font-family: monospace;
+    border: 1px solid #736d5f;
+    background-color: white;
+    color: #736d5f;
+    border-radius: 10px;
     cursor: pointer;
+    outline: none;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#btn:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
-    transition: 0.3s ease-in-out;
+.submit-btn:hover {
+    background-color: #a4bdf7;
+    border-color: #7a826e;
 }
 
+.next-btn {
+    width: 50px;
+    height: auto;
+}
