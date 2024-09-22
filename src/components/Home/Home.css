@@ -4,13 +4,11 @@
     0% {
         opacity: 0;
         transform: scale(0.5);
-        /* Start small and transparent */
     }
 
     100% {
         opacity: 1;
         transform: scale(1);
-        /* Full size and visible */
     }
 }
 
@@ -23,8 +21,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
+    overflow-y: auto;
 }
-
 
 .home {
     display: flex;
@@ -34,17 +32,18 @@ body {
     height: 100vh;
     opacity: 0;
     transform: scale(1.5);
-    animation: popUp 1s ease-in-out forwards;
+    animation: popUp 1s ease-in-out forwards; /* Smooth pop-up animation */
 }
 
 .logo-container {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px; /* Slightly adjusted positioning */
+    left: 20px;
 }
 
 .logo {
     width: 150px;
+    height: auto;
 }
 
 .navbar {
@@ -55,50 +54,46 @@ body {
 
 .navbar a {
     font-family: monospace;
-    margin-top: 100px;
     margin-left: 5px;
     margin-right: 40px;
     font-size: 17px;
-    color:  #3b4034;
+    color: #3b4034;
     text-decoration: none;
 }
 
 .navbar a:hover {
     color: #a4bdf7;
-
 }
 
-.about 
-{
-    font-family: monospace;
-    margin-left: 5px;
-    margin-right: 40px;
-    font-size: 17px;
-    color:  #3b4034;
-    text-decoration: none;
-
+.content {
+    display: flex;
+    flex-direction: column; /* Stack title and button vertically */
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Full height */
+    text-align: center;
+    z-index: 2; /* Ensure it's above the background */
 }
+
 .title {
-    margin-top: -100px;
-    font-family: 'Baskerville';
-    margin-left: -600px;
-    margin-bottom: -80px;
-    font-size: 200px;
-    color: #7a826e;
+    font-family: 'Baskerville', serif;
+    font-size: clamp(4rem, 10vw, 12rem); /* Responsive scaling */
+    color: #4a4a4a; /* Darker for better contrast */
+    margin-bottom: 20px; /* Space between title and button */
 }
 
 .italicized {
-    font-family: 'Baskerville';
+    font-family: 'Baskerville', serif;
     font-style: italic;
-    font-size: 220px;
+    font-size: clamp(5rem, 12vw, 14rem); /* Responsive scaling for different screens */
+    color: #8e8e8e; /* Slightly lighter gray */
 }
 
 .start-btn {
-    font-style: bold;
-    margin-left: -600px;
-    margin-top: 70px;
-    padding: 5px 30px;
-    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 15px 40px;
+    font-size: 1.5rem;
     font-family: monospace;
     border: 1px solid #736d5f;
     background-color: white;
@@ -111,6 +106,6 @@ body {
 }
 
 .start-btn:hover {
-    background-color:  #a4bdf7;
+    background-color: #a4bdf7; /* Hover effect */
     border-color: #7a826e;
 }
