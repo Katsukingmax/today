@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
-import logo from '../../assets/mainlogo.PNG';
+import logo from '../../assets/mainlogo.PNG'; 
 import About from '../About/About';
 import Footer from '../Footer/Footer';
 
@@ -14,11 +14,17 @@ const HomePage = () => {
   }, []);
 
   const handleStartNow = () => {
+    console.log("Navigating to /name-input");
     navigate('/name-input');
   };
 
   return (
     <div className={`home-page ${animatePage ? 'pop-up' : ''}`}>
+      {/* Cloud animation */}
+      <div className="cloud-container">
+        <div className="clouds"></div>
+      </div>
+
       <section className="home" id="home">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
@@ -29,8 +35,8 @@ const HomePage = () => {
             <span className="italicized">to</span>
             <span>day.</span>
           </div>
-        
-          <button onClick={handleStartNow} className="start-btn">start now</button>
+
+          <button onClick={handleStartNow} className="start-btn">Start Now</button>
         </div>
       </section>
 
