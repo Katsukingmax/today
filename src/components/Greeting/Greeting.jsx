@@ -6,6 +6,11 @@ const Greeting = () => {
   const [username, setUsername] = useState('');
   const navigate = useNavigate();
 
+  const capitalizeFirstLetter = (name) => {
+    if(!name) return 'guest';
+    return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+  };
+
   useEffect(() => {
     const storedUsername = localStorage.getItem('username');
     if (storedUsername) {
@@ -21,7 +26,7 @@ const Greeting = () => {
 
   return (
     <div className="splash-container">
-      <div className = "greeting-message">Hi, <span className = "greeting-name">{username || 'guest'}</span>!</div>
+      <div className = "greeting-message">Hi, <span className = "greeting-name">{capitalizeFirstLetter(username)}</span>!</div>
       <p>Let's start <span className = "greeting-today">today</span></p>
     </div>
   );
