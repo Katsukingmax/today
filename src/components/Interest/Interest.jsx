@@ -1,24 +1,29 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Interest.css';
+import nextButtonImg from '../../assets/nextbutton.PNG'; 
 
 const Interest = () => {
   const [interest, setInterest] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setInterest(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+ const handleSubmit = (e) => {
     e.preventDefault();
 
-    const interestData = {
-      interest: interest
-    };
+    if (!interest) {
+      alert('Please select an interest!');
+      return;
+    }
 
-    localStorage.setItem('interestData', JSON.stringify(interestData));
+    // Store the interest in localStorage
+    localStorage.setItem('interest', interest);
 
-    console.log('Interest data stored in local storage: ', interestData);
-    alert(`Your interest "${interest}" has been saved locally!`);
+    // Navigate to the results page
+    navigate('/plan');  // Assuming your results page is PlanToday
   };
 
   return (
@@ -27,50 +32,65 @@ const Interest = () => {
       <form onSubmit={handleSubmit} className="interest-form">
         <div className="interest-option">
           <label>
-            <input
-              type="radio"
-              value="Art"
-              checked={interest === 'Art'}
-              onChange={handleChange}
-            />
-            <span className="interest-label">Art</span>
-          </label>
-        </div>
-
-        <div className="interest-option">
-          <label>
-            <input
-              type="radio"
-              value="Sport"
-              checked={interest === 'Sport'}
-              onChange={handleChange}
-            />
-            <span className="interest-label">Sport</span>
-          </label>
-        </div>
-
-        <div className="interest-option">
-          <label>
-            <input
-              type="radio"
-              value="Food"
-              checked={interest === 'Food'}
-              onChange={handleChange}
-            />
-            <span className="interest-label">Food</span>
-          </label>
-        </div>
-
-        <div className="interest-option">
-          <label>
-            <input
-              type="radio"
-              value="Relax/Chill"
-              checked={interest === 'Relax/Chill'}
-              onChange={handleChange}
-            />
-            <span className="interest-label">Relax/Chill</span>
-          </label>
+          <input
+            type="radio"
+            name="interest"
+            value="Art"
+            checked={interest === 'Art'}
+            onChange={handleChange}
+          />
+          Art
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="interest"
+            value="Sports"
+            checked={interest === 'Sports'}
+            onChange={handleChange}
+          />
+          Sports
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="interest"
+            value="Nature"
+            checked={interest === 'Nature'}
+            onChange={handleChange}
+          />
+          Nature
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="interest"
+            value="Food"
+            checked={interest === 'Food'}
+            onChange={handleChange}
+          />
+          Food
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="interest"
+            value="Relax"
+            checked={interest === 'Relax'}
+            onChange={handleChange}
+          />
+          Relax
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="interest"
+            value="Try New Thing"
+            checked={interest === 'Try New Thing'}
+            onChange={handleChange}
+          />
+          Try New Thing
+        </label>
         </div>
 
         <div className="interest-option">
@@ -98,7 +118,9 @@ const Interest = () => {
           </label>
         </div>
 
-        <button type="submit" className="submit-btn">Submit</button>
+        <button type="submit" id="btn"  className="submit-btn">
+          <img src={nextButtonImg} alt="Go to the next page" id="next-btn" />
+        </button>
       </form>
     </div>
   );
