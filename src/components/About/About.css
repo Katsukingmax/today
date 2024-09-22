@@ -7,9 +7,9 @@ html, body {
     height: 100%;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-  }
-  
-  .about-container {
+}
+
+.about-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,87 +20,157 @@ html, body {
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
-  }
-  
-  .about-image-container {
+}
+
+.about-image-container {
     flex: 1;
     max-width: 350px;
     padding-right: 20px;
-  }
-  
-  .about-image {
+}
+
+.about-image {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-  }
-  
-  .about-text {
+}
+
+.about-text {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
-  }
-  
-  .about-text h2 {
+}
+
+.about-text h2 {
     font-size: 48px;
     font-weight: bold;
     margin: 0 0 10px 0;
     color: #7a826e;
-  }
-  
-  .aboutTitle {
+}
+
+.aboutTitle {
     display: flex;
     align-items: baseline;
     font-family: 'Baskerville';
     margin: 0;
     font-size: 50px;
     color: #7a826e;
-  }
-  
-  .aboutItalicized {
+}
+
+.aboutItalicized {
     font-style: italic;
     font-size: 100px;
     color: #7a826e;
     margin-left: 20px;
-  }
-  
-  .finalTitle {
+}
+
+.finalTitle {
     font-size: 90px;
-  }
-  
-  .about-text p {
+}
+
+.about-text p {
     font-size: 16px;
     line-height: 1.8;
     max-width: 600px;
-  }
-  
-  .personal-info {
-    font-family:monospace;
+}
+
+.personal-info {
+    font-family: monospace;
     font-size: 14px;
     font-style: italic;
     margin-top: 20px;
-  }
+}
 
-  .today {
+.today {
     font-family: 'Baskerville';
     font-size: 20px;
     font-style: italic;
     padding-left: 5px;
     color: #515a43;
-  }
+}
 
-  .para {
+.para p {
     padding-top: 20px;
     font-family: monospace;
-  }
+}
 
-  .secondToday {
+.secondToday {
     font-family: 'Baskerville';
     font-size: 30px;
     font-style: italic;
     padding-left: 5px;
     color: #515a43;
-  }
-  
+}
+
+@media only screen and (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .about-image-container {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .about-image {
+      padding-left: 50px;
+      align-items: center;
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    .about-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .aboutTitle {
+      font-style: bold;
+      padding-top: -40px;
+        font-size: 30px;
+    }
+
+    .aboutItalicized {
+      padding-left: 10px;
+        font-size: 50px;
+        margin-left: 0;
+    }
+
+    .finalTitle {
+        font-size: 50px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+        line-height: 1.6;
+        max-width: 100%;
+    }
+
+    .today {
+        font-size: 20px;
+    }
+
+    .secondToday {
+        font-size: 20px;
+    }
+
+    .para p {
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .personal-info 
+    {
+      padding-bottom: 50px;
+    }
+}
