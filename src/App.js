@@ -28,17 +28,15 @@
 // export default App;
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './components/Home/Home'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Time from './components/Time/Time';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Time />} />
+      </Routes>
     </Router>
   );
 }

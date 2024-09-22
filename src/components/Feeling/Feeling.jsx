@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Feeling.css';
+import happyImage from '../../assets/happy.PNG';
+import sadImage from '../../assets/sad.PNG';
 import huhImage from '../../assets/huh.PNG';
+import nextButtonImg from '../../assets/nextbutton.PNG'; // Import the next button image
 
 const Feeling = () => {
   const [feeling, setFeeling] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFeeling(e.target.value);
@@ -12,53 +17,61 @@ const Feeling = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Store the feeling data in JSON format in localStorage
-    const feelingData = {
-      feeling: feeling
-    };
-
-    // Save to local storage as a JSON string
+    const feelingData = { feeling };
     localStorage.setItem('feelingData', JSON.stringify(feelingData));
 
-    // Log to console to simulate saving the data
-    console.log('Feeling data stored in local storage:', feelingData);
     alert(`Your feeling "${feeling}" has been saved locally!`);
+    
+    // Navigate to the Time page after submission
+    navigate('/time');
   };
 
   return (
-    <div>
+    <div className="feeling-container">
       <h1>How are you feeling?</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <input
-            type="radio"
-            value="Happy"
-            checked={feeling === 'Happy'}
-            onChange={handleChange}
-          />
-          Happy
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="Sad"
-            checked={feeling === 'Sad'}
-            onChange={handleChange}
-          />
-          Sad
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="Idk"
-            checked={feeling === 'Idk'}
-            onChange={handleChange}
-          />
-          <img src="huhImage" alt="idk" />
-          Idk
-        </label>
-        <button type="submit">Submit</button>
-        {/* <button onClick={  }>Go to Next Page</button> */}
+      <form onSubmit={handleSubmit} className="feeling-form">
+        <div className="feeling-option">
+          <label>
+            <input
+              type="radio"
+              value="Happy"
+              checked={feeling === 'Happy'}
+              onChange={handleChange}
+            />
+            <img src={happyImage} alt="Happy" className="feeling-image" />
+            Happy
+          </label>
+        </div>
+
+        <div className="feeling-option">
+          <label>
+            <input
+              type="radio"
+              value="Sad"
+              checked={feeling === 'Sad'}
+              onChange={handleChange}
+            />
+            <img src={sadImage} alt="Sad" className="feeling-image" />
+            Sad
+          </label>
+        </div>
+
+        <div className="feeling-option">
+          <label>
+            <input
+              type="radio"
+              value="Idk"
+              checked={feeling === 'Idk'}
+              onChange={handleChange}
+            />
+            <img src={huhImage} alt="IDK" className="feeling-image" />
+            IDK
+          </label>
+        </div>
+
+        <button type="submit" id="btn">
+          <img src={nextButtonImg} alt="Go to the next page" id="next-btn" />
+        </button>
       </form>
     </div>
   );
