@@ -1,14 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; 
+import './PlanToday.css';
 
 const PlanToday = () => {
   const feeling = localStorage.getItem('feeling') || 'Unknown';
   const time = localStorage.getItem('time') || 'Unknown';
   const interest = localStorage.getItem('interest') || 'Unknown';
-  const username = localStorage.getItem('username') || 'Guest';;
+  const username = localStorage.getItem('username') || 'Guest';
 
-  console.log('Feeling:', feeling);
-  console.log('Time:', time);
-  console.log('Interest:', interest);
+  const capitalizeFirstLetter = (name) => {
+    if(!name) return 'xf';
+    return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+  };
+
+  const navigate = useNavigate();
 
   const getResult = () => {
     if (feeling === 'Happy') {
@@ -151,7 +156,7 @@ const PlanToday = () => {
             return 'No suggestion available for this combination.';
         }
       }
-    } else if (feeling === 'IDK') {
+    } else if (feeling === 'Idk') {
       if (time === 'Less than 1 hour') {
         switch (interest) {
           case 'Art':
@@ -226,15 +231,19 @@ const PlanToday = () => {
     return 'No plan available for this combination.';
   };
 
+  const handleRestart = () => {
+    localStorage.clear();
+    navigate('/name-input');
+  };
+
   return (
-    <div>
-      <h1><span className = "greeting-name">{username || 'guest'}</span>'s Plan for Today</h1>
+    <div className="plan-container">
+      <h1><span className="greeting-name">{capitalizeFirstLetter(username)}</span>'s Plan for Today</h1>
       <p>Feeling: {feeling}</p>
       <p>Available Time: {time}</p>
       <p>Interest: {interest}</p>
       <h2>{getResult()}</h2>
-
-      <button type="reset" id="restart-btn"  className="restart">Restart</button>
+      <button type="button" id="restart-btn" onClick={handleRestart}>Restart</button>
     </div>
   );
 };
