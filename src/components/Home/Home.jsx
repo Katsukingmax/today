@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Home.css';
-import logo from '../../assets/mainlogo.PNG';  
-import About from '../About/About.jsx';  
-import Footer from '../Footer/Footer.jsx';  // Import the Footer component
+import logo from '../../assets/mainlogo.PNG';
+import About from '../About/About';
+import Footer from '../Footer/Footer';
 
 const HomePage = () => {
   const [animatePage, setAnimatePage] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setAnimatePage(true);
   }, []);
 
-  // Smooth scroll to About section
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleStartNow = () => {
+    navigate('/greeting'); // Navigate to Greeting component
   };
 
   return (
@@ -27,19 +24,16 @@ const HomePage = () => {
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo" />
         </div>
-        <nav className="navbar">
-          <Link to="/register" className="register">register</Link>
-          <Link to="/login" className="login">login</Link>
-          <button onClick={scrollToAbout} className="about">about</button> {}
-        </nav>
+
+        {/* Title Section */}
         <div className="content">
           <div className="title">
             <span className="italicized">to</span>
             <span>day.</span>
           </div>
-          <Link to="/register">
-            <button className="start-btn">start now</button>
-          </Link>
+        
+          {/* Start Now Button */}
+          <button onClick={handleStartNow} className="start-btn">start now</button>
         </div>
       </section>
 
@@ -49,7 +43,7 @@ const HomePage = () => {
       </section>
 
       {/* Footer Section */}
-      <Footer />  {/* Render Footer component at the bottom */}
+      <Footer />
     </div>
   );
 };
