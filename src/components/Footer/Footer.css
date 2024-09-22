@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400;1,400&display=swap');
+
+.footer {
+    background-color: #7a826e; 
+    color: #fff; 
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Newsletter Section */
+  .newsletter-section {
+    margin-bottom: 40px; /* Add space between the newsletter and footer links */
+  }
+  
+  .newsletter-title {
+    font-family: 'Baskerville';
+    font-size: 23px;
+    color: #fff; 
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .newsletter-today {
+    font-family: 'Baskerville';
+    font-size: 28px;
+    color: #fff;
+    font-style: italic;
+  }
+  .email-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background-color: #1a1a1a;
+    color: #fff;
+    width: 300px; 
+  }
+  
+  .email-input::placeholder {
+    color: #fff; 
+  }
+  
+  .get-started-button {
+    font-family: monospace;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ece9cd;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .get-started-button:hover {
+    background-color: #d1dcf5; /* Lighter hover effect */
+  }
+  
+  /* Footer Links Section */
+  .footer-nav {
+    margin-top: 20px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    padding-top: 20px;
+    font-family: 'Baskerville';
+    font-size: 20px;
+ 
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: #ece9cd; /* Hover color */
+  }
+  
