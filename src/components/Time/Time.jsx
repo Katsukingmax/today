@@ -6,7 +6,7 @@ const Time = () => {
   const navigate = useNavigate();
 
   const goToInterestPage = () => {
-    navigate('interest');
+    navigate('/interest');
   }
 
   return (

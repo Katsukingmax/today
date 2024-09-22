@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import React, { useState } from 'react'
 import './Interest.css'
 
 const Interest = () => {
@@ -10,7 +11,7 @@ const Interest = () => {
   const handleSubmit=(e)=>{
     e.preventDefault();
 
-    const interestData={
+    const interestData = {
       interest: interest
     };
 
