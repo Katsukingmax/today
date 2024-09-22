@@ -8,7 +8,6 @@
     font-family: 'Arial', sans-serif;
   }
   
-  /* Newsletter Section */
   .newsletter-section {
     margin-bottom: 40px; /* Add space between the newsletter and footer links */
   }
@@ -59,10 +58,9 @@
   }
   
   .get-started-button:hover {
-    background-color: #d1dcf5; /* Lighter hover effect */
+    background-color: #d1dcf5;
   }
   
-  /* Footer Links Section */
   .footer-nav {
     margin-top: 20px;
   }
@@ -88,6 +86,6 @@
   }
   
   .footer-links a:hover {
-    color: #ece9cd; /* Hover color */
+    color: #ece9cd;
   }
   
