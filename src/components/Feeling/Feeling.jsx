@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Feeling.css';  // Make sure you create Feeling.css
+import './Feeling.css';
 import happyImage from '../../assets/happy.PNG';
 import sadImage from '../../assets/sad.PNG';
 import huhImage from '../../assets/huh.PNG';
@@ -21,8 +21,7 @@ const Feeling = () => {
       alert('Please select how you feel!');
       return;
     }
-
-    // Store the feeling in localStorage
+    
     localStorage.setItem('feeling', feeling);
 
     // Navigate to the Time page
