@@ -1,8 +1,8 @@
 ## Inspiration
-The Langara 2024 hackathon theme was 'nothing'. When it was announced, we saw 'nothing' as a problem that lots of people encounter. No matter in what situation they are, sometimes we just have 'nothing' to do. Due to that, we decided to built "Today", which offers a solution for nothing.
+Build "today" for Langara College 2024. When the theme for it was announced which was 'nothing', we saw 'nothing' as a problem that lots of people encounter. No matter in what situation they are, sometimes we just have 'nothing' to do. Due to that, we decided to built "today", which offers a solution for nothing.
 
 ## What it does
-Today is a web-based app that is focused on creating a personalized plan generator for you. You can choose how you feel, the time you have, and pick an interest. From there, "Today" will generate a plan for you based on all the things you choose. 
+Today is a web-based app that is focused on creating a personalized plan generator for you. You can choose how you feel, the time you have, and pick an interest. From there, "today" will generate a plan for you based on all the things you choose. 
 
 ## How we built it
 Focusing on the front-end part of things, we mainly developed 'Today' with react.js as the main component, css for basic styling, and we use static data (for easy learning and deliverance).
