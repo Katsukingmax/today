@@ -13,7 +13,7 @@ const About = () => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
     }, 1200);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <section className="about-container">
