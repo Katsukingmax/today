@@ -23,7 +23,7 @@ Our current version of "Today" focuses on core functionality. In the future, we 
 data expansion, user accounts, and AI Integration. 
 
 ## Snapshots Of "today" 
-<img width="1511" alt="Screenshot 2024-12-20 at 3 04 35 PM" src="https://github.com/user-attachments/assets/dcb20343-41d4-4a30-934d-b7ee7b53c0b1" />
+<img width="1160" alt="Screenshot 2024-12-20 at 3 18 51 PM" src="https://github.com/user-attachments/assets/563d94aa-dbb3-41be-a796-6bec3199efd9" />
 
 <img width="1411" alt="Screenshot 2024-12-20 at 3 11 39 PM" src="https://github.com/user-attachments/assets/99ce72b6-ec71-4966-894d-f8c6115c69b1" />
 
