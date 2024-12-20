@@ -1,19 +1,28 @@
+# Project Overview 
+
 ## Inspiration
-Build "today" for Langara College's hackathon 2024. When the theme for it was announced which was 'nothing', we saw 'nothing' as a problem that lots of people encounter. No matter in what situation they are, sometimes we just have 'nothing' to do. Due to that, we decided to built "today", which offers a solution for nothing.
+"today" was created for Langara College’s 2024 hackathon, where the theme revolved around the concept of "nothing." We realized that "nothing" is often a universal problem where there are moments when you simply have nothing to do. Inspired by this, we set out to build "today", a solution that transforms "nothing" into a meaningful plan.
 
-## What it does
-Today is a web-based app that is focused on creating a personalized plan generator for you. You can choose how you feel, the time you have, and pick an interest. From there, "today" will generate a plan for you based on all the things you choose. 
+## What It Does
+"today" is a web-based application that helps you fill your time with engaging activities. You begin by selecting how you’re feeling, how much time you have, and your area of interest. Based on these inputs, "today" generates a personalized plan, turning empty moments into something purposeful and enjoyable.
 
-## How we built it
-Focusing on the front-end part of things, we mainly developed 'Today' with react.js as the main component, css for basic styling, and we use static data (for easy learning and deliverance).
+## How We Built It
+We developed "today" primarily using React.js for the front-end and CSS for styling. Due to the time constraints, we opted to use static data sources, making it simpler for us to create a streamlined user experience within the hackathon timeframe.
 
-## Challenges we ran into
-Considering this is our very first hackathon for our whole team, time was something that we're all worried of. In the first 24 hours, we have to learn so much more new things, fetching data, debugging codes for hours, and how to collaborate and work effectively.
-Accomplishments that we're proud of
-Although we face challenges throughout our working-time and making adjustments here and there, but we're proud to say that we complete the project just in time. And we're also extremelyq proud of ourselves that we can push through the whole hackathon and not giving up. 
+## Challenges We Faced
+As first-time hackathon participants, our biggest hurdle was the clock. In just 24 hours, we had to rapidly learn new technologies, troubleshoot complex issues, and figure out how to collaborate efficiently as a team. Balancing these challenges tested both our technical abilities and our teamwork.
 
-## What we learned
-Other then the technical part of things, we mostly learned how to communicate, work together, and breaking boundaries on things that we thought were impossible at the very beginning. We also realized that nothing is impossible when we work hard. 
+## Accomplishments We're Proud Of
+Despite the pressure and steep learning curve, we successfully delivered a working prototype on time. More importantly, we’re proud of how we pushed through difficulties, stayed resilient, and supported one another. Completing our first hackathon project has left us confident and motivated.
 
-## What's next for Today
-We built "Today" mainly focusing on the basic features only due to time restrictions. However, we believe that "Today" can be so much more! We could implement more databases, adding more features such as user having an account to create history on plans they generated, even more we could implement AI to help generate more data. Basically, the future is "Today".
+## What We Learned
+Aside from technical skills, we gained valuable lessons in communication, cooperation, and adaptability. We learned that with determination, effective teamwork, and an open mind, we can overcome daunting challenges. The experience taught us that, truly, nothing is impossible when we give it our all.
+
+## What's Next for "Today"
+Our current version of "Today" focuses on core functionality. In the future, we plan to enhance it with more robust features, including 
+data expansion, user accounts, and AI Integration. 
+
+
+
+
+
