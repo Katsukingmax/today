@@ -18,11 +18,11 @@ Despite the pressure and steep learning curve, we successfully delivered a worki
 ## What We Learned
 Aside from technical skills, we gained valuable lessons in communication, cooperation, and adaptability. We learned that with determination, effective teamwork, and an open mind, we can overcome daunting challenges. The experience taught us that, truly, nothing is impossible when we give it our all.
 
-## What's Next for "Today"
+## What's Next for "today"
 Our current version of "Today" focuses on core functionality. In the future, we plan to enhance it with more robust features, including 
 data expansion, user accounts, and AI Integration. 
 
-## Snapshots 
+## Snapshots Of "today" 
 <img width="1511" alt="Screenshot 2024-12-20 at 3 04 35 PM" src="https://github.com/user-attachments/assets/dcb20343-41d4-4a30-934d-b7ee7b53c0b1" />
 
 <img width="1411" alt="Screenshot 2024-12-20 at 3 11 39 PM" src="https://github.com/user-attachments/assets/99ce72b6-ec71-4966-894d-f8c6115c69b1" />
